@@ -1,0 +1,40 @@
+<div class="test-info">
+    Question {{ index }} / {{ total }}
+</div>
+<form method="POST">
+    {% csrf_token %}
+
+    <h3>{{ q.qtext }}</h3>
+
+    <div class="option-box">
+        <input type="radio" name="answer" value="{{ q.op1 }}"> {{ q.op1 }}
+    </div>
+
+    <div class="option-box">
+        <input type="radio" name="answer" value="{{ q.op2 }}"> {{ q.op2 }}
+    </div>
+
+    <div class="option-box">
+        <input type="radio" name="answer" value="{{ q.op3 }}"> {{ q.op3 }}
+    </div>
+
+    <div class="option-box">
+        <input type="radio" name="answer" value="{{ q.op4 }}"> {{ q.op4 }}
+    </div>
+
+    <br>
+
+    <!-- BUTTONS -->
+    <button type="submit" name="action" value="prev" class="btn">
+        ⬅ Previous
+    </button>
+
+    <button type="submit" name="action" value="next" class="btn">
+        Next ➡
+    </button>
+
+    <button type="submit" name="action" value="end" class="btn" style="background:red;">
+        End Exam
+    </button>
+
+</form>

@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2 class="page-title">User Management</h2>
+
+    <div class="dashboard-grid">
+
+        <a href="/examapp/create-user/" class="dash-card">
+            <h3>Add User</h3>
+            <p>Create new student/admin</p>
+        </a>
+
+    </div>
+
+    <table>
+
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for u in users %}
+
+        <tr>
+            <td>{{ u.username }}</td>
+            <td>{{ u.email }}</td>
+            <td>{{ u.role }}</td>
+            <td>
+
+                <a href="{% url 'update_user' u.uid %}" class="btn">Edit</a>
+
+                <a href="{% url 'delete_user' u.uid %}" class="btn">Delete</a>
+
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}

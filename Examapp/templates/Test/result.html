@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="result-container">
+
+    <div class="result-card">
+
+        <h1 class="result-title">
+            🎉 Test Completed
+        </h1>
+
+        <p class="result-text">
+            Your Final Score
+        </p>
+
+        <h2 class="score">
+            {{ score }} / {{ total }}
+        </h2>
+
+        <a href="/examapp/subject/" class="btn">
+            🔁 Start New Test
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

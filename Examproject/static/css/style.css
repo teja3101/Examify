@@ -1,0 +1,261 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY */
+
+body{
+    background:#eef2ff;
+    min-height:100vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    background:#111827;
+    padding:18px 40px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s;
+    padding:8px 14px;
+    border-radius:6px;
+}
+
+.navbar a:hover{
+    background:#2563eb;
+    color:white;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    width:92%;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0px 8px 25px rgba(0,0,0,0.08);
+}
+
+/* PAGE TITLE */
+
+.page-title{
+    font-size:34px;
+    margin-bottom:30px;
+    color:#111827;
+    font-weight:700;
+}
+
+/* TABLE DESIGN */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+table th{
+    background:#1e293b;
+    color:white;
+    padding:16px;
+    font-size:16px;
+    text-align:left;
+}
+
+table td{
+    padding:15px;
+    border-bottom:1px solid #e5e7eb;
+    color:#374151;
+    font-size:15px;
+}
+
+table tr{
+    transition:0.3s;
+}
+
+table tr:hover{
+    background:#f8fafc;
+}
+
+/* BUTTONS */
+
+.btn{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:0.3s;
+    margin-right:6px;
+}
+
+/* EDIT BUTTON */
+
+.btn{
+    background:#2563eb;
+    color:white;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+/* DELETE BUTTON */
+
+.btn-danger{
+    background:#dc2626;
+    color:white;
+}
+
+.btn-danger:hover{
+    background:#b91c1c;
+}
+
+/* SUBJECT PAGE */
+
+.subject-box{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+/* SUBJECT CARDS */
+
+.subject-card{
+    width:240px;
+    height:150px;
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0px 8px 18px rgba(37,99,235,0.25);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.subject-card::before{
+    content:'';
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-120px;
+    right:-100px;
+}
+
+.subject-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0px 15px 25px rgba(37,99,235,0.35);
+}
+
+/* SUBJECT LINK */
+
+.subject-card a{
+    text-decoration:none;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    z-index:2;
+}
+
+/* FORM DESIGN */
+
+form{
+    width:100%;
+}
+
+form input,
+form select,
+form textarea{
+    width:100%;
+    padding:14px;
+    margin-top:8px;
+    margin-bottom:20px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:15px;
+    transition:0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0px 0px 8px rgba(37,99,235,0.2);
+}
+
+/* FORM BUTTON */
+
+form button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 22px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+form button:hover{
+    background:#1d4ed8;
+}
+
+/* LOGIN CARD */
+
+.login-card{
+    width:400px;
+    margin:60px auto;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0px 8px 25px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-wrap:wrap;
+        gap:12px;
+        padding:15px;
+    }
+
+    .container{
+        width:95%;
+        padding:20px;
+    }
+
+    .subject-card{
+        width:100%;
+    }
+
+    table{
+        font-size:13px;
+    }
+}

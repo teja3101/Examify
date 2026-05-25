@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="page-title">Delete Questions</h2>
+
+<table>
+
+    <tr>
+        <th>Question</th>
+        <th>Subject</th>
+        <th>Action</th>
+    </tr>
+
+    {% for q in questions %}
+
+    <tr>
+        <td>{{ q.qtext }}</td>
+        <td>{{ q.subject }}</td>
+        <td>
+            <a href="{% url 'delete_question' q.qno %}" class="btn btn-danger">
+                Delete
+            </a>
+        </td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}

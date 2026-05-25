@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="home-container">
+
+    <h1 class="home-title">Question Management</h1>
+
+    <p class="home-subtitle">Manage all exam questions here</p>
+
+    <div class="dashboard-grid">
+
+        <a href="/examapp/create-question/" class="dash-card">
+            <h3>Add Question</h3>
+            <p>Create new exam questions</p>
+        </a>
+
+        <a href="/examapp/show-questions/" class="dash-card">
+            <h3>View Questions</h3>
+            <p>See all questions</p>
+        </a>
+
+        <a href="/examapp/show-update-question/" class="dash-card">
+            <h3>Update Questions</h3>
+            <p>Edit existing questions</p>
+        </a>
+
+        <a href="/examapp/show-delete-question/" class="dash-card">
+            <h3>Delete Questions</h3>
+            <p>Remove unwanted questions</p>
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

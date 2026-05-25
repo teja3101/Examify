@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="form-container">
+
+    <h2 class="title">Update Question</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="qtext" value="{{ q.qtext }}">
+        <input type="text" name="op1" value="{{ q.op1 }}">
+        <input type="text" name="op2" value="{{ q.op2 }}">
+        <input type="text" name="op3" value="{{ q.op3 }}">
+        <input type="text" name="op4" value="{{ q.op4 }}">
+        <input type="text" name="corr_answer" value="{{ q.corr_answer }}">
+        <input type="text" name="subject" value="{{ q.subject }}">
+
+        <button type="submit">Update Question</button>
+    </form>
+
+</div>
+
+{% endblock %}

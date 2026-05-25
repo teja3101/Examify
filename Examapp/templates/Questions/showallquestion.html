@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="page-container">
+
+    <h1 class="page-title">All Questions</h1>
+
+    <div class="table-wrapper">
+
+        <table class="data-table">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Question</th>
+                    <th>Subject</th>
+                    <th>Correct Answer</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for q in questions %}
+
+                <tr>
+                    <td>{{ q.qno }}</td>
+                    <td>{{ q.qtext }}</td>
+                    <td>{{ q.subject }}</td>
+                    <td>
+                        <span class="badge">
+                            {{ q.corr_answer }}
+                        </span>
+                    </td>
+                </tr>
+
+                {% empty %}
+
+                <tr>
+                    <td colspan="4" style="text-align:center;">
+                        No questions available
+                    </td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

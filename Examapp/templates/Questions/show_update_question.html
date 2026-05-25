@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="page-title">Update Questions</h2>
+
+<table>
+
+    <tr>
+        <th>Question</th>
+        <th>Subject</th>
+        <th>Action</th>
+    </tr>
+
+    {% for q in questions %}
+
+    <tr>
+        <td>{{ q.qtext }}</td>
+        <td>{{ q.subject }}</td>
+        <td>
+            <a href="{% url 'update_question' q.qno %}" class="btn">
+                Update
+            </a>
+        </td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}

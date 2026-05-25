@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Portal</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <a href="/examapp/">🏠 Home</a>
+
+        <a href="/examapp/questioncurd/">Questions</a>
+
+        <a href="/examapp/userdashboard/">Users</a>
+
+        <a href="/examapp/subject/">Test</a>
+
+        <a href="/examapp/logoutuser/">Logout</a>
+
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="container">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="home-container">
+
+    <h1 class="home-title">
+        🎓 Welcome to Exam Portal
+    </h1>
+
+    <p class="home-subtitle">
+        Practice Questions • Take Tests • View Results
+    </p>
+
+    <div class="home-grid">
+
+        <a href="/examapp/questioncurd/" class="home-card">
+            📘 Question Module
+        </a>
+
+        <a href="/examapp/userdashboard/" class="home-card">
+            👤 User Module
+        </a>
+
+        <a href="/examapp/subject/" class="home-card">
+            🧪 Start Test
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

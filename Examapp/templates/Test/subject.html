@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="page-container">
+
+    <h1 class="page-title">Select Subject</h1>
+
+    <div class="card-grid">
+
+        <a class="card" href="/examapp/start-test/?subject=Python">
+            🐍 Python
+        </a>
+
+        <a class="card" href="/examapp/start-test/?subject=HTML">
+            🌐 HTML
+        </a>
+
+        <a class="card" href="/examapp/start-test/?subject=CSS">
+            🎨 CSS
+        </a>
+
+        <a class="card" href="/examapp/start-test/?subject=SQL">
+            🗄️ SQL
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}
